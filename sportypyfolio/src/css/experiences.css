@@ -1,0 +1,43 @@
+.MainButtons {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(24, 23, 23);
+    margin-bottom: 0.5rem;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.MainButtons img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.MainButtons div {
+    margin-left: 2rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.MainButtons img {
+    margin-right: 1rem;
+}
+
+.MainButtons img:hover {
+    cursor: pointer;
+}
+
+.MainButtons button {
+    border: none;
+    background: none;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.MainButtons button:hover {
+    cursor: pointer;
+}
+
+.Jobs {
+    background-color: rgb(24, 23, 23);
+    border-radius: 12px;
+}

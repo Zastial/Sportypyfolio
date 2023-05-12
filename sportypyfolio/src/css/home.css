@@ -1,0 +1,32 @@
+.App {
+    display: flex;
+    background-color: black;
+    height: 100vh;
+}
+
+p {
+    color: white;
+}
+
+.Experiences {
+    width: 20vw;
+    height: 85vh;
+    margin: 0.5rem;
+    border-radius: 12px;
+}
+
+.MainContent {
+    width: 60vw;
+    height: 85vh;
+    background-color: rgb(24, 23, 23);
+    margin: 0.5rem;
+    border-radius: 12px;
+}
+
+.Contacts {
+    width: 20vw;
+    height: 85vh;
+    background-color: rgb(24, 23, 23);
+    margin: 0.5rem;
+    border-radius: 12px;
+}
