@@ -2,6 +2,7 @@ import React from 'react';
 import '../css/experiences.css';
 import home from'../css/home.png';
 import search from'../css/search.png';
+import moi from '../css/moi.png';
 
 var experiences = [
   {
@@ -9,27 +10,70 @@ var experiences = [
     "title": "Software Engineer",
     "location": "Mountain View, CA",
     "dates": "2017 - Present",
-    "description": "I work on the Google Photos team, building the next generation of photo sharing and storage products."
+    "description": "I work on the Google Photos team, building the next generation of photo sharing and storage products.",
+    "src": "../css/perso.png"
   },
   {
     "company": "Facebook",
     "title": "Software Engineer",
     "location": "Menlo Park, CA",
     "dates": "2015 - 2017",
-    "description": "I worked on the News Feed team, building the next generation of ranking and personalization products."
+    "description": "I worked on the News Feed team, building the next generation of ranking and personalization products.",
+    "src": "../css/moi.png"
   },
   {
     "company": "Microsoft",
     "title": "Software Engineer",
     "location": "Redmond, WA",
     "dates": "2013 - 2015",
-    "description": "I worked on the Bing team, building the next generation of search and personalization products."
+    "description": "I worked on the Bing team, building the next generation of search and personalization products.",
+    "src": "../css/google.png"
+  },
+  {
+    "company": "Microsoft",
+    "title": "Software Engineer",
+    "location": "Redmond, WA",
+    "dates": "2013 - 2015",
+    "description": "I worked on the Bing team, building the next generation of search and personalization products.",
+    "src": "../css/google.png"
+  },
+  {
+    "company": "Microsoft",
+    "title": "Software Engineer",
+    "location": "Redmond, WA",
+    "dates": "2013 - 2015",
+    "description": "I worked on the Bing team, building the next generation of search and personalization products.",
+    "src": "../css/google.png"
+  },
+  {
+    "company": "Microsoft",
+    "title": "Software Engineer",
+    "location": "Redmond, WA",
+    "dates": "2013 - 2015",
+    "description": "I worked on the Bing team, building the next generation of search and personalization products.",
+    "src": "../css/google.png"
+  },
+  {
+    "company": "Microsoft",
+    "title": "Software Engineer",
+    "location": "Redmond, WA",
+    "dates": "2013 - 2015",
+    "description": "I worked on the Bing team, building the next generation of search and personalization products.",
+    "src": "../css/google.png"
+  },
+  {
+    "company": "Microsoft",
+    "title": "Software Engineer",
+    "location": "Redmond, WA",
+    "dates": "2013 - 2015",
+    "description": "I worked on the Bing team, building the next generation of search and personalization products.",
+    "src": "../css/google.png"
   }];
 
 class MainButtons extends React.Component {
     render() {
         return (
-            <div className="MainButtons">
+            <div className="MainButtons" key={this.props.key}>
               <div className="Home">
                 <img className="Logo" src={home} alt="logo"/>
                 <button className="HomeBut"> Home </button> 
@@ -56,11 +100,11 @@ class Jobs extends React.Component {
     var jobs = []
     for (var i = 0; i < experiences.length; i++) {
       var job = <Experience
+        key = {i}
         company={experiences[i].company}
         title={experiences[i].title}
         location={experiences[i].location}
-        dates={experiences[i].dates}
-        description={experiences[i].description}
+        src={experiences[i].src}
       />
       jobs.push(job)
     }
@@ -81,11 +125,15 @@ class Experience extends React.Component {
     render() {
         return (
             <div className="Experience">
-              <h3> {this.props.company} </h3>
-              <h4> {this.props.title} </h4>
-              <h4> {this.props.location} </h4>
-              <h4> {this.props.dates} </h4>
-              <p> {this.props.description} </p>
+              <a href="https://www.google.com">
+                <div className="image">
+                  <img className="Logo" src={moi} alt="logo"/>
+                </div>
+                <div className="infos">
+                  <h3> {this.props.company} </h3>
+                  <p> {this.props.title} </p>
+                </div>
+              </a>
             </div>
           );
     }

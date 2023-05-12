@@ -1,4 +1,6 @@
 .MainButtons {
+    max-height: 15vh;
+    min-height: 15vh;
     display: flex;
     flex-direction: column;
     background-color: rgb(24, 23, 23);
@@ -40,4 +42,49 @@
 .Jobs {
     background-color: rgb(24, 23, 23);
     border-radius: 12px;
+    max-height: 69vh;
+    min-height: 69vh;
+    overflow: scroll;
+}
+
+.Jobs h2 {
+    margin-bottom: 2rem;
+}   
+
+.Jobs .Experience a {
+    width: 92%;
+    display: flex;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.Jobs .Experience a:hover {
+    background-color: rgb(59, 57, 57);
+}
+
+.Jobs .Experience .image {
+    margin-left: 0.5rem;
+}
+
+.Jobs .Experience img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5px;
+}
+
+.Jobs .Experience .infos {
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.Jobs .Experience .infos h3 {
+    color: white;
+    font-style: bold;
+    margin-top: 0.5rem;
+}
+
+.Jobs .Experience .infos p {
+    color: grey;
+    padding-bottom: -1rem;
 }

@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    color: white;
+}
+
 .App {
     display: flex;
     background-color: black;
@@ -10,14 +15,16 @@ p {
 
 .Experiences {
     width: 20vw;
-    height: 85vh;
+    max-height: 85vh;
+    min-height: 85vh;
     margin: 0.5rem;
     border-radius: 12px;
 }
 
 .MainContent {
     width: 60vw;
-    height: 85vh;
+    max-height: 85vh;
+    min-height: 85vh;
     background-color: rgb(24, 23, 23);
     margin: 0.5rem;
     border-radius: 12px;
@@ -25,7 +32,8 @@ p {
 
 .Contacts {
     width: 20vw;
-    height: 85vh;
+    max-height: 85vh;
+    min-height: 85vh;
     background-color: rgb(24, 23, 23);
     margin: 0.5rem;
     border-radius: 12px;
