@@ -2,25 +2,33 @@
     max-height: 15vh;
     min-height: 15vh;
     display: flex;
-    flex-direction: column;
     background-color: rgb(24, 23, 23);
     margin-bottom: 0.5rem;
     border-radius: 12px;
-    text-align: left;
 }
 
 .MainButtons img {
-    width: 2rem;
-    height: 2rem;
+    max-height: 4vh;
 }
 
-.MainButtons div {
-    margin-left: 2rem;
-    padding: 1rem 1rem 0.5rem 1rem;
+.MainButtons .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+.MainButtons .main-content .logo {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.MainButtons .main-content .search {
+    display: flex;
 }
 
 .MainButtons img {
-    margin-right: 1rem;
+    padding-right: 1rem;
 }
 
 .MainButtons img:hover {
@@ -47,9 +55,22 @@
     overflow: scroll;
 }
 
-.Jobs h2 {
-    margin-bottom: 2rem;
-}   
+.Jobs .exp-elm {
+    display: flex;
+}
+
+.Jobs .exp-elm h2 {
+    width: 65%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.Jobs .exp-elm p {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .Jobs .Experience a {
     width: 92%;

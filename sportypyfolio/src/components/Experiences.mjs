@@ -1,8 +1,8 @@
 import React from 'react';
 import '../css/experiences.css';
-import home from'../css/home.png';
-import search from'../css/search.png';
-import moi from '../css/moi.png';
+import home from '../css/assets/home.png';
+import search from '../css/assets/search.png';
+import moi from '../css/assets/moi.png';
 
 var experiences = [
   {
@@ -74,13 +74,15 @@ class MainButtons extends React.Component {
     render() {
         return (
             <div className="MainButtons" key={this.props.key}>
-              <div className="Home">
-                <img className="Logo" src={home} alt="logo"/>
-                <button className="HomeBut"> Home </button> 
-              </div>
-              <div className="Search">
-                <img className="Logo" src={search} alt="logo"/>
-                <button className="SearchBut"> Search </button>
+              <div className="main-content">
+                <div className="logo">
+                  <img className="Logo" src={home} alt="logo"/>
+                  <button className="HomeBut"> Home </button> 
+                </div>
+                <div className="search">
+                  <img className="Logo" src={search} alt="logo"/>
+                  <button className="SearchBut"> Search </button>
+                </div>
               </div>
             </div>
           );
@@ -94,6 +96,7 @@ class Jobs extends React.Component {
     this.state = {
       jobs: []
     };
+    this.ExperienceModal = this.ExperienceModal.bind(this);
   }
     
   componentDidMount() {
@@ -110,11 +113,20 @@ class Jobs extends React.Component {
     }
     this.setState({jobs: jobs})
   }
+
+  ExperienceModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+  }
   
   render() {
         return (
             <div className="Jobs">
-              <h2>My Experiences</h2>
+              <div className="exp-elm">
+                <h2>My Experiences</h2>
+                <p onClick={this.ExperienceModal}>+</p>
+                <p>---{'>'}</p>
+              </div>
               {this.state.jobs}
             </div>
           );

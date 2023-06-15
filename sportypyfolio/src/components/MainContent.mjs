@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/mainContent.css';
-import moi from '../css/moi.png';
+import moi from '../css/assets/moi.png';
 
 class FirstPresentation extends React.Component {
 
